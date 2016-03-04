@@ -176,7 +176,12 @@ def get_class_label(n_train, data_tuple):
 
 def evaluate(predicted_class_labels, test_tuple):
     """
+    Evaluates if the predicted class labels correspond to the real class  labels from the file.
+
+
     """
+
+    #EVALUATING
     data = dict()
     list_of_class_labels = []
     real_class_labels = tuple([x[-1] for x in test_tuple])
@@ -192,6 +197,7 @@ def evaluate(predicted_class_labels, test_tuple):
             data[real_label]["wrong"] += 1
 
 
+    #PRINTING STATISTICS
     print("Evaluation statistics:")
     print()
     correct_predictions = sum(map(Counter, data.values()), Counter())["correct"]

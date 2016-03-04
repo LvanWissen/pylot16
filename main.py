@@ -18,7 +18,7 @@ test_file = args.f[0]
 train_file = args.t[0]
 
 sep = args.sep
-neighbours = args.n
+neighbours = int(args.n)
 
 train_tuple = load_file(train_file, sep)
 test_tuple = load_file(test_file, sep)
@@ -32,6 +32,8 @@ print("Printing statistics for test file %s:" % test_file)
 print_stats(test_tuple)
 
 # PREDICTING AND EVALUATING
+print("Predicting and ealuating class labels... This may take a while...")
+print()
 predicted_class_labels = predict(train_tuple, test_tuple, neighbours)
 evaluate(predicted_class_labels, test_tuple)
 
