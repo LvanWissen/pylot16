@@ -3,7 +3,17 @@
 Tool to predict class labels of TiMBL data and evaluate the prediction.
 
 #### How to use
-
+	usage: main.py [-h] -f test_file -t train_file [-sep [sep]] [-n [neighbours]]
+	
+	Diminutive predictor and evaluator
+	
+	optional arguments:
+	  -h, --help       show this help message and exit
+	  -f test_file     path to a test file with data
+	  -t train_file    path to a train file with data
+	  -sep [sep]       specifies the seperator the data file uses for its items (default=",")
+	  -n [neighbours]  specifies how many neighbours should be used in calculating
+	                   a best match (default="1")
 
 #### Example output
 ```sh
